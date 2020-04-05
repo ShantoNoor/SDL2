@@ -4,7 +4,7 @@
         {
             "type": "shell",
             "label": "Debug Build",
-            "command": "mingw32-make -f SDL2 debug_build",
+            "command": "mingw32-make -f SDL2+OpenGL debug_build",
             "problemMatcher": [
                 "$gcc"
             ]
@@ -12,7 +12,7 @@
         {
             "type": "shell",
             "label": "Debug Build and Run",
-            "command": "start cmd /c \"mingw32-make -f SDL2 debug_build && cls && title main-d.exe && bin\\main-d.exe && echo. & echo. & echo. & pause\"",
+            "command": "start cmd /c \"mingw32-make -f SDL2+OpenGL debug_build && cls && title main-d.exe && bin\\main-d.exe && echo. & echo. & echo. & pause\"",
             "problemMatcher": [
                 "$gcc"
             ],
@@ -24,7 +24,7 @@
         {
             "type": "shell",
             "label": "Release Build and Run",
-            "command": "mingw32-make -f SDL2 release_build_and_run",
+            "command": "mingw32-make -f SDL2+OpenGL release_build_and_run",
             "problemMatcher": [
                 "$gcc"
             ],
