@@ -1,27 +1,27 @@
 #DEBUG
 debug_compile:
-	cd obj && del *.o && g++ -Wall -g -IC:\dev\SDL2\i686-w64-mingw32\include -c ..\src\*.cpp
+	title Debug Compile && cd obj && del *.o && g++ -Wall -g -IC:\dev\SDL2\i686-w64-mingw32\include -c ..\src\*.cpp
 debug_link:
-	g++ -LC:\dev\SDL2\i686-w64-mingw32\lib -o "bin\main-d.exe" "obj\*.o" -lmingw32 -lSDL2main -lSDL2
+	title Debug Link && g++ -LC:\dev\SDL2\i686-w64-mingw32\lib -o "bin\main-d.exe" "obj\*.o" -lmingw32 -lSDL2main -lSDL2
 debug_build:
-	mingw32-make -f SDL2 debug_compile && mingw32-make -f SDL2 debug_link
+	title Debug Build && mingw32-make -f SDL2 debug_compile && mingw32-make -f SDL2 debug_link
 debug_run:
-	cls && title main-d.exe && bin\main-d.exe
+	title Debug Run && cd bin && cls && title main-d.exe && main-d.exe
 debug_build_and_run:
-	mingw32-make -f SDL2 debug_build && mingw32-make -f SDL2 debug_run
+	title Debug Build and Run && mingw32-make -f SDL2 debug_build && mingw32-make -f SDL2 debug_run
 
 
 #RELEASE
 release_compile:
-	cd obj && del *.o && g++ -Wall -O3 -IC:\dev\SDL2\i686-w64-mingw32\include -c ..\src\*.cpp
+	title Release Compile && cd obj && del *.o && g++ -Wall -O3 -IC:\dev\SDL2\i686-w64-mingw32\include -c ..\src\*.cpp
 release_link:
-	g++ -LC:\dev\SDL2\i686-w64-mingw32\lib -o "bin\main-r.exe" "obj\*.o" -lmingw32 -lSDL2main -lSDL2 -s -mwindows
+	title Release Link && g++ -LC:\dev\SDL2\i686-w64-mingw32\lib -o "bin\main-r.exe" "obj\*.o" -lmingw32 -lSDL2main -lSDL2 -s -mwindows
 release_build:
-	mingw32-make -f SDL2 release_compile && mingw32-make -f SDL2 release_link
+	title Release Build && mingw32-make -f SDL2 release_compile && mingw32-make -f SDL2 release_link
 release_run:
-	cls && title main-r.exe && bin\main-r.exe
+	title Release Run && cd bin && cls && title main-r.exe && main-r.exe
 release_build_and_run:
-	mingw32-make -f SDL2 release_build && mingw32-make -f SDL2 release_run
+	title Release Build and Run && mingw32-make -f SDL2 release_build && mingw32-make -f SDL2 release_run
 
 
 dc:
@@ -88,11 +88,11 @@ csdll:
 
 
 setup_1:
-	mingw32-make -f SDL2 caf && mingw32-make -f SDL2 csdll
+	title SDL2 Setup 1 && mingw32-make -f SDL2 caf && mingw32-make -f SDL2 csdll
 s1:
 	mingw32-make -f SDL2 setup_1
 
 setup_2:
-	mingw32-make -f SDL2 c3f && mingw32-make -f SDL2 csdll
+	title SDL2 Setup 2 && mingw32-make -f SDL2 c3f && mingw32-make -f SDL2 csdll
 s2:
 	mingw32-make -f SDL2 setup_2
