@@ -8,4 +8,4 @@
 "C:\\dev\\SDL2\\i686-w64-mingw32\\include\\SDL2",
 "C:\\dev\\SDL2\\SDL2_image\\i686-w64-mingw32\\include\\SDL2",
 "C:\\dev\\SDL2\\SDL2_ttf\\i686-w64-mingw32\\include\\SDL2",
-"C:\\dev\\SDL2\\SDL2_mixer\\i686-w64-mingw32\\include\\SDL2",
+"C:\\dev\\SDL2\\SDL2_mixer\\i686-w64-mingw32\\include\\SDL2",            

@@ -28,7 +28,7 @@
                 "limitSymbolsToIncludedHeaders": true,
                 "databaseFilename": ""
             },
-            "cStandard": "c11",
+            "cStandard": "c17",
             "cppStandard": "c++17"
         }
     ],

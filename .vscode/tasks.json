@@ -12,7 +12,7 @@
         {
             "type": "shell",
             "label": "Debug Build and Run",
-            "command": "start cmd /c \"mingw32-make -f SDL2 debug_build && cd bin && cls && title main-d.exe && main-d.exe && echo. & echo. & echo. & pause\"",
+            "command": "start cmd /c \"mingw32-make -f SDL2 debug_build && echo. & echo. & echo. & pause && cd bin && cls && title main-d.exe && main-d.exe && echo. & echo. & echo. & pause\"",
             "problemMatcher": [
                 "$gcc"
             ],
