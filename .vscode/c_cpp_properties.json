@@ -3,7 +3,10 @@
         {
             "name": "Win32",
             "includePath": [
-                "C:\\dev\\SDL2\\i686-w64-mingw32\\include",
+                "C:\\dev\\SDL2\\i686-w64-mingw32\\include\\SDL2",
+                "C:\\dev\\SDL2\\SDL2_image\\i686-w64-mingw32\\include\\SDL2",
+                "C:\\dev\\SDL2\\SDL2_ttf\\i686-w64-mingw32\\include\\SDL2",
+                "C:\\dev\\SDL2\\SDL2_mixer\\i686-w64-mingw32\\include\\SDL2",
                 "${workspaceFolder}\\src",
                 "${workspaceFolder}"
             ],
@@ -15,14 +18,16 @@
             "intelliSenseMode": "gcc-x64",
             "browse": {
                 "path": [
-                    "C:\\dev\\SDL2\\i686-w64-mingw32\\include",
+                    "C:\\dev\\SDL2\\i686-w64-mingw32\\include\\SDL2",
+                    "C:\\dev\\SDL2\\SDL2_image\\i686-w64-mingw32\\include\\SDL2",
+                    "C:\\dev\\SDL2\\SDL2_ttf\\i686-w64-mingw32\\include\\SDL2",
+                    "C:\\dev\\SDL2\\SDL2_mixer\\i686-w64-mingw32\\include\\SDL2",
                     "${workspaceFolder}\\src",
                     "${workspaceFolder}"
                 ],
                 "limitSymbolsToIncludedHeaders": true,
                 "databaseFilename": ""
             },
-            "compilerPath": "C:\\dev\\mingw-w64\\i686-8.1.0-posix-dwarf-rt_v6-rev0\\mingw32\\bin\\g++.exe",
             "cStandard": "c11",
             "cppStandard": "c++17"
         }

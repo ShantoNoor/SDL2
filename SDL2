@@ -1,8 +1,13 @@
+#Include and Lib files location:
+INCLUDE = -IC:\\dev\\SDL2\\i686-w64-mingw32\\include\\SDL2 -IC:\\dev\\SDL2\\SDL2_image\\i686-w64-mingw32\\include\\SDL2 -IC:\\dev\\SDL2\\SDL2_ttf\\i686-w64-mingw32\\include\\SDL2 -IC:\\dev\\SDL2\\SDL2_mixer\\i686-w64-mingw32\\include\\SDL2
+LIBRARY = -LC:\\dev\\SDL2\\i686-w64-mingw32\\lib -LC:\\dev\\SDL2\\SDL2_image\\i686-w64-mingw32\\lib -LC:\\dev\\SDL2\\SDL2_ttf\\i686-w64-mingw32\\lib -LC:\\dev\\SDL2\\SDL2_mixer\\i686-w64-mingw32\\lib
+LIB = -lmingw32 -lSDL2main -lSDL2 -lSDL2.dll -lSDL2_image -lSDL2_image.dll -lSDL2_ttf -lSDL2_ttf.dll -lSDL2_mixer -lSDL2_mixer.dll
+
 #DEBUG
 debug_compile:
-	title Debug Compile && cd obj && del *.o && g++ -Wall -g -IC:\dev\SDL2\i686-w64-mingw32\include -c ..\src\*.cpp
+	title Debug Compile && cd obj && del *.o && g++ -Wall -g $(INCLUDE) -c ..\src\*.cpp
 debug_link:
-	title Debug Link && g++ -LC:\dev\SDL2\i686-w64-mingw32\lib -o "bin\main-d.exe" "obj\*.o" -lmingw32 -lSDL2main -lSDL2
+	title Debug Link && g++ $(LIBRARY) -o "bin\main-d.exe" "obj\*.o" $(LIB)
 debug_build:
 	title Debug Build && mingw32-make -f SDL2 debug_compile && mingw32-make -f SDL2 debug_link
 debug_run:
@@ -13,9 +18,9 @@ debug_build_and_run:
 
 #RELEASE
 release_compile:
-	title Release Compile && cd obj && del *.o && g++ -Wall -O3 -IC:\dev\SDL2\i686-w64-mingw32\include -c ..\src\*.cpp
+	title Release Compile && cd obj && del *.o && g++ -Wall -O3 $(INCLUDE) -c ..\src\*.cpp
 release_link:
-	title Release Link && g++ -LC:\dev\SDL2\i686-w64-mingw32\lib -o "bin\main-r.exe" "obj\*.o" -lmingw32 -lSDL2main -lSDL2 -s -mwindows
+	title Release Link && g++ $(LIBRARY) -o "bin\main-r.exe" "obj\*.o" $(LIB) -s -mwindows
 release_build:
 	title Release Build && mingw32-make -f SDL2 release_compile && mingw32-make -f SDL2 release_link
 release_run:
